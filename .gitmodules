@@ -1,0 +1,3 @@
+[submodule "bundle/vim-easydir"]
+	path = bundle/vim-easydir
+	url = https://github.com/duggiefresh/vim-easydir.git
