@@ -1,3 +1,18 @@
 [submodule "bundle/vim-easydir"]
 	path = bundle/vim-easydir
 	url = https://github.com/duggiefresh/vim-easydir.git
+[submodule "bundle/vim-ruby-refactoring"]
+	path = bundle/vim-ruby-refactoring
+	url = https://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "bundle/vim-extradite"]
+	path = bundle/vim-extradite
+	url = https://github.com/int3/vim-extradite.git
+[submodule "bundle/vim-javascript-syntax"]
+	path = bundle/vim-javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git

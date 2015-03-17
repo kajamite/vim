@@ -3,6 +3,8 @@
 "
 " I use vim-pathogen for managing plugins
 execute pathogen#infect()
+
+set regexpengine=1
 syntax on
 filetype plugin indent on " Automatically detect file types.
 
