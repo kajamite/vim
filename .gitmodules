@@ -16,3 +16,12 @@
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-rubyhash"]
+	path = bundle/vim-rubyhash
+	url = https://github.com/rorymckinley/vim-rubyhash.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/tmhedberg/matchit.git
+[submodule "bundle/vim-monokai2"]
+	path = bundle/vim-monokai2
+	url = https://github.com/kajamite/vim-monokai2.git

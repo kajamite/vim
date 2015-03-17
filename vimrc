@@ -1,5 +1,5 @@
 " VIMRC of Oleh Novosad
-
+" Best to use with tmux
 "
 " I use vim-pathogen for managing plugins
 execute pathogen#infect()
