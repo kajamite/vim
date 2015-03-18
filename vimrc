@@ -1,4 +1,4 @@
-" VIMRC of Oleh Novosad
+" VIMRC mix by Oleh Novosad (https://github.com/kajamite/vim)
 " Best to use with tmux
 "
 " I use vim-pathogen for managing plugins
