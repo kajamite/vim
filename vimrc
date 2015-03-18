@@ -4,6 +4,8 @@
 " I use vim-pathogen for managing plugins
 execute pathogen#infect()
 
+runtime macros/matchit.vim " used by textobj-rubyblock
+
 " ctrlp configs
 set runtimepath^=~/.vim/bundle/ctrlp.vim  
 hi def link CtrlPMatch CursorLine
@@ -342,8 +344,8 @@ nmap ; :
 " Ctrl+e for recent files list (CtrlP plugin required) 
 nmap <C-e> :CtrlPMRU<CR>
 nmap <C-r> :R<CR>                                 " Show related file (like view for controller or controller for model) - requires rails.vim plugin
-nmap ,n :NERDTreeFind<CR>                         " Find the current file in the tree. - requires NERD Tree plugin
-nmap ,m :NERDTreeToggle<CR>                       " Toggle NERD Tree
+nmap <Leader>n :NERDTreeFind<CR>                         " Find the current file in the tree. - requires NERD Tree plugin
+nmap <Leader>m :NERDTreeToggle<CR>                       " Toggle NERD Tree
 
 " Show syntax highlighting attributes of character under cursor.
 map <C-q>  :call SyntaxAttr()<CR>
@@ -371,6 +373,11 @@ nnoremap <leader>h :noh<cr>
 " Instead of having to reach for the escape key (or even worse, for the C-[
 " key combo) I just do C-c and I’m back to normal mode.
 inoremap <C-c> <Esc>
+
+" Quickly get out of insert mode without your fingers having to leave the
+" home row (either use 'jj' or 'jk')
+inoremap jj <Esc>
+inoremap jk <Esc>
 
 " I’m aliasing w and q to their uppercase counterparts because I often have
 " the shift key pressed and I type W instead of w.
@@ -405,6 +412,4 @@ nnoremap <C-l> <C-w>l
 " shortcut is also handy because I can get to my .vimrc file quickly.
 nnoremap <leader><leader> :b#<cr>
 nnoremap <leader>V :e $MYVIMRC<cr>
-
-
 
