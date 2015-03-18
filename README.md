@@ -1,5 +1,9 @@
 # Install
 
+My ready to go VIM package for quick setup on new machines.
+
+This package is ruby/rails oriented with monokai2 theme by default.
+
 1) Backup/rename (!) your previous .vim folder and vimrc files.
 
 2) Then just install full package (including all plugins):
