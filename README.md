@@ -11,6 +11,7 @@
 If you need more information about every plugin, read their README docs
 in corresponding folders in ~/.vim/bundle folder.
 
+3) You will need to additionaly configure YouCompleteMe plugin. Read more here http://valloric.github.io/YouCompleteMe/
 
 Enjoy!
 
