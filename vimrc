@@ -4,6 +4,9 @@
 " I use vim-pathogen for managing plugins
 execute pathogen#infect()
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim  " ctrlp plugin
+call ctrlp_bdelete#init()                 " for d11wtq/ctrlp_bdelete.vim plugin
+
 set regexpengine=1
 syntax on
 filetype plugin indent on " Automatically detect file types.
