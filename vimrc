@@ -22,7 +22,7 @@ call ctrlp_bdelete#init()
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_multi_buffers = 1
 
-
+let g:ackprg = 'ag --nogroup --nocolor --column'  " configuring ag.vim plugin to use ag 
 
 " Disable tag generation on file save
 " On large projects, generating a tags file is slow so I don’t really want
@@ -340,13 +340,13 @@ let mapleader=" "                                   " My <Leader> key
 nmap ; :
 
 " Ctrl+e for recent files list (CtrlP plugin required) 
-nmap <leader>e :CtrlPMRU<CR>
+nmap <C-e> :CtrlPMRU<CR>
 
 " ctrlp buffers
-nnoremap <leader>bb :CtrlPBuffer<cr>
+nnoremap <C-b> :CtrlPBuffer<cr>
 
 " ctrlp tags
-nmap <leader>b :CtrlPTag<cr>
+nmap <c-w> :CtrlPTag<cr>
 
 " Show related file (like view for controller or controller for model) - requires rails.vim plugin
 nmap <C-r> :R<CR>                                 
