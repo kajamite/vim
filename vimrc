@@ -349,7 +349,7 @@ nnoremap <C-b> :CtrlPBuffer<cr>
 nmap <c-w> :CtrlPTag<cr>
 
 " Show related file (like view for controller or controller for model) - requires rails.vim plugin
-nmap <C-r> :R<CR>                                 
+nmap <C-g> :R<CR>                                 
 
 " Find the current file in the tree. - requires NERD Tree plugin
 nmap <Leader>n :NERDTreeFind<CR>        
@@ -426,3 +426,4 @@ nnoremap <leader>V :e $MYVIMRC<cr>
 map <Leader>tf <Plug>RunCurrentSpecFile
 map <Leader>tt <Plug>RunFocusedSpec
 map <Leader>tl <Plug>RunMostRecentSpec
+
