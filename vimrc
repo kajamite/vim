@@ -3,6 +3,7 @@
 "
 " I use vim-pathogen for managing plugins
 execute pathogen#infect()
+Helptags  " I NEED HELP!
 
 runtime macros/matchit.vim " used by textobj-rubyblock
 
@@ -15,7 +16,6 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git\|node_modules\|bin\|\.hg\|\.svn\|build\|log\|resources\|coverage\|doc\|tmp\|public/assets\|vendor\|Android',
   \ 'file': '\.jpg$\|\.exe$\|\.so$\|tags$\|\.dll$'
   \ }
-nnoremap <C-b> :CtrlPBuffer<cr>
 " CtrlP Delete
 call ctrlp_bdelete#init()
 " " CtrlP Funky
@@ -35,9 +35,7 @@ let g:vim_tags_auto_generate = 0
 let g:VtrUseVtrMaps = 0
 " Vim spec runner
 let g:spec_runner_dispatcher = 'call VtrSendCommand("{command}")'
-map <Leader>tf <Plug>RunCurrentSpecFile
-map <Leader>tt <Plug>RunFocusedSpec
-map <Leader>tl <Plug>RunMostRecentSpec
+
 
 
 " ag config for skwp/greplace.vim
@@ -342,10 +340,22 @@ let mapleader=" "                                   " My <Leader> key
 nmap ; :
 
 " Ctrl+e for recent files list (CtrlP plugin required) 
-nmap <C-e> :CtrlPMRU<CR>
-nmap <C-r> :R<CR>                                 " Show related file (like view for controller or controller for model) - requires rails.vim plugin
-nmap <Leader>n :NERDTreeFind<CR>                         " Find the current file in the tree. - requires NERD Tree plugin
-nmap <Leader>m :NERDTreeToggle<CR>                       " Toggle NERD Tree
+nmap <leader>e :CtrlPMRU<CR>
+
+" ctrlp buffers
+nnoremap <leader>bb :CtrlPBuffer<cr>
+
+" ctrlp tags
+nmap <leader>b :CtrlPTag<cr>
+
+" Show related file (like view for controller or controller for model) - requires rails.vim plugin
+nmap <C-r> :R<CR>                                 
+
+" Find the current file in the tree. - requires NERD Tree plugin
+nmap <Leader>n :NERDTreeFind<CR>        
+
+" Toggle NERD Tree
+nmap <Leader>m :NERDTreeToggle<CR>                       
 
 " Show syntax highlighting attributes of character under cursor.
 map <C-q>  :call SyntaxAttr()<CR>
@@ -410,6 +420,9 @@ nnoremap <C-l> <C-w>l
 " Two of my favorite shortcuts. The first one allows me to type the spacebar
 " twice and it will bring me back to the last buffer I was on. The <leader>V
 " shortcut is also handy because I can get to my .vimrc file quickly.
-nnoremap <leader><leader> :b#<cr>
+" nnoremap <leader><leader> :b#<cr>
 nnoremap <leader>V :e $MYVIMRC<cr>
 
+map <Leader>tf <Plug>RunCurrentSpecFile
+map <Leader>tt <Plug>RunFocusedSpec
+map <Leader>tl <Plug>RunMostRecentSpec
