@@ -16,6 +16,7 @@ This package is ruby/rails oriented with monokai2 theme by default.
     in corresponding folders in ~/.vim/bundle folder.
 
 3. You will need to additionaly configure YouCompleteMe plugin (if you plan to use it). Read more about it [here](http://valloric.github.io/YouCompleteMe/).
+4. For ag.vim plugin to work you need to install ag itself(if you don't already). Read more [here](https://github.com/rking/ag.vim).
 
 ### Enjoy!
 
