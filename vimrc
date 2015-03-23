@@ -21,6 +21,7 @@ call ctrlp_bdelete#init()
 " " CtrlP Funky
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_multi_buffers = 1
+let g:ctrlp_funky_syntax_highlight = 1
 
 let g:ackprg = 'ag --nogroup --nocolor --column'  " configuring ag.vim plugin to use ag 
 
@@ -117,7 +118,8 @@ let g:rehash256 = 1
 :set t_ut=
 
 " Not fan of wrapping 
-:set nowrap
+" But with no mouse horizontal scrolling it is the way to go
+:set wrap
 
 " Force vim to use 256 colors
 :set t_Co=256
@@ -175,7 +177,8 @@ set laststatus=2                                    " Always show status line.
 
 " gvim specific
 set mousehide                                       " Hide mouse after chars typed
-set mouse=a                                         " Mouse in all modes
+set mouse=niv                                         " Mouse in all modes
+" set guioptions+=b
 
 " At this moment I use autosave plugin.
 " I don't want backup files.
@@ -267,8 +270,13 @@ if executable('ag')
 endif
 
 " Change cursor shape when in insert mode for tmux running in iTerm2 on OS X:
-let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 
 " Complete till longest common string.
@@ -445,3 +453,11 @@ map <Leader>tl <Plug>RunMostRecentSpec
 :vnoremap <leader>rrlv :RRenameLocalVariable<cr>
 :vnoremap <leader>rriv :RRenameInstanceVariable<cr>
 :vnoremap <leader>rem  :RExtractMethod<cr>
+
+" CtrlP Funky plugin
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
+" open ag.vim
+nnoremap <leader>a :Ag
