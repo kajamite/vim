@@ -196,3 +196,6 @@
 [submodule "bundle/vim-endwise"]
 	path = bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise.git
+[submodule "bundle/vim-husk"]
+	path = bundle/vim-husk
+	url = https://github.com/bruno-/vim-husk.git
