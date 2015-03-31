@@ -2,7 +2,7 @@
 
 On MacOS I would recommend install macvim with lua:
 
-    brew reinstall macvim --with-cscope --with-lua --with-ruby --HEAD
+    brew install macvim --with-cscope --with-lua --with-ruby --HEAD
         
 My ready to go VIM package for quick setup on new machines.
 
