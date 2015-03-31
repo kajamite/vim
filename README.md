@@ -3,7 +3,7 @@
 On MacOS I would recommend install macvim with lua:
 
     ```zsh
-        brew reinstall macvim --with-cscope --with-lua --with-ruby --HEAD                                                                                 
+        brew reinstall macvim --with-cscope --with-lua --with-ruby --HEAD                                       
     ```
 My ready to go VIM package for quick setup on new machines.
 
