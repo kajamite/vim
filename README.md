@@ -1,6 +1,6 @@
 # Install
 
-On MacOS I would recommend install macvim with lua:
+On MacOS I would recommend install macvim with Lua (Lua is required by neocomplete):
 
     brew install macvim --with-cscope --with-lua --with-ruby --HEAD
         
